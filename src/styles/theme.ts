@@ -23,12 +23,12 @@ const colors = {
 
 const font = {
   sizes: {
-    ssm: "1rem",
-    sm: "1.4rem",
-    md: "1.6rem",
-    lg: "2.4rem",
-    xl: "3.3rem",
-    xxl: "6.4rem",
+    ssm: "0.625rem", //10px
+    sm: "0.875rem", //14px
+    md: "1rem", //16px
+    lg: "1.5rem", //24px
+    xl: "2rem", //33px
+    xxl: "4rem", //64px
   },
 };
 
