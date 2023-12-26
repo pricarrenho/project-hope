@@ -1,8 +1,9 @@
-import * as S from "./styles";
-import logo from "../../assets/images/logo.png";
 import { GoBellFill } from "react-icons/go";
 import { IoIosMail } from "react-icons/io";
 import { FcBusinessman } from "react-icons/fc";
+import { Input } from "../Input";
+import logo from "../../assets/images/logo.png";
+import * as S from "./styles";
 
 export const Header = () => {
   return (
@@ -16,10 +17,7 @@ export const Header = () => {
       </S.LogoContainer>
 
       <S.HeaderContent>
-        {/* TO DO: fazer o input virar componente */}
-        <div>
-          <input type="text" placeholder="Search" />
-        </div>
+        <Input inputType="text" label="Search..." name="inputSearch" />
 
         <S.HeaderLinks>
           <GoBellFill size={24} />

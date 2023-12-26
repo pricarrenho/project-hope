@@ -13,8 +13,9 @@ export const LogoContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 8px;
-    width: 257px;
     border-bottom: 2px solid ${theme.colors.neutral[300]};
+    background-color: ${theme.colors.neutral[400]};
+    width: 257px;
   `}
 `;
 
@@ -27,7 +28,7 @@ export const LogoImage = styled.img`
 
 export const LogoText = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xl};
+    font-size: ${theme.font.sizes.lg};
     font-weight: 500;
     color: ${theme.colors.white};
     line-height: 130%;
