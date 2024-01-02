@@ -1,8 +1,15 @@
 import styled, { css } from "styled-components";
 
-export const LayoutContent = styled.div`
+export const LayoutContainer = styled.div`
   ${() => css`
     display: flex;
-    gap: 4px;
+  `}
+`;
+
+export const RightContent = styled.div`
+  ${() => css`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   `}
 `;

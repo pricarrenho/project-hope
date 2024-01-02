@@ -1,3 +1,4 @@
+import { Banner } from "../components/Banner";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Routes } from "../routes";
@@ -5,16 +6,16 @@ import * as S from "./styles";
 
 export const Layout = () => {
   return (
-    <div>
-      <Header />
+    <S.LayoutContainer>
+      <Sidebar />
 
-      <S.LayoutContent>
-        <Sidebar />
+      <S.RightContent>
+        <Header />
 
-        <div>
-          <Routes />
-        </div>
-      </S.LayoutContent>
-    </div>
+        <Banner />
+
+        <Routes />
+      </S.RightContent>
+    </S.LayoutContainer>
   );
 };
