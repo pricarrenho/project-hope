@@ -13,7 +13,7 @@ export const Input = styled.input`
   ${({ theme }) => css`
     padding: 12px 16px 12px 48px;
     background-color: ${theme.colors.neutral[400]};
-    border: 1px solid #30384f;
+    border: 1px solid ${theme.colors.neutral[300]};
     border-radius: 4px;
 
     &::placeholder {
@@ -21,6 +21,10 @@ export const Input = styled.input`
       color: ${theme.colors.neutral[100]};
       font-weight: 400;
       line-height: 175%;
+    }
+
+    &:focus {
+      outline: 1px solid ${theme.colors.blue[400]};
     }
   `}
 `;
