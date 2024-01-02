@@ -1,32 +1,22 @@
-import { GoBellFill } from "react-icons/go";
-import { IoIosMail } from "react-icons/io";
 import { FcBusinessman } from "react-icons/fc";
 import { Input } from "../Input";
-import logo from "../../assets/images/logo.png";
 import * as S from "./styles";
+import { Button } from "../Button";
 
 export const Header = () => {
   return (
     <S.HeaderContainer>
-      <S.LogoContainer>
-        <S.LogoImage
-          src={logo}
-          alt="Logo da hope UI. Traços azuis conectados formando uma hashtag "
-        />
-        <S.LogoText>Hope UI</S.LogoText>
-      </S.LogoContainer>
-
       <S.HeaderContent>
         <Input inputType="text" label="Search..." name="inputSearch" />
 
         <S.HeaderLinks>
-          <GoBellFill size={24} />
+          <Button icon="bell" styleType="justIcon" />
 
-          <IoIosMail size={24} />
+          <Button icon="mail" styleType="justIcon" />
 
           <S.HeaderLinks>
             <S.Avatar>
-              <FcBusinessman size={24} />
+              <FcBusinessman size={36} />
             </S.Avatar>
 
             <div>

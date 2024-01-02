@@ -7,34 +7,6 @@ export const HeaderContainer = styled.div`
   `}
 `;
 
-export const LogoContainer = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 2px solid ${theme.colors.neutral[300]};
-    background-color: ${theme.colors.neutral[400]};
-    width: 257px;
-  `}
-`;
-
-export const LogoImage = styled.img`
-  ${() => css`
-    width: 28px;
-    height: 28px;
-  `}
-`;
-
-export const LogoText = styled.h1`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.lg};
-    font-weight: 500;
-    color: ${theme.colors.white};
-    line-height: 130%;
-  `}
-`;
-
 export const HeaderContent = styled.div`
   ${() => css`
     flex: 1;
