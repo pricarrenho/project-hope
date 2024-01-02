@@ -17,8 +17,12 @@ export const GlobalStyle = createGlobalStyle`
       background: ${theme.colors.background};
     }
 
-    div {
-      color: white;
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
     }
   `}
 `;

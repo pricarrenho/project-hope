@@ -16,6 +16,7 @@ const colors = {
   neutral: {
     100: "#ADB5BD",
     200: "#8A92A6",
+    250: "#343948",
     300: "#30384F",
     400: "#222738",
   },
@@ -28,7 +29,7 @@ const font = {
     md: "1rem", //16px
     lg: "1.5rem", //24px
     xl: "2rem", //33px
-    xxl: "4rem", //64px
+    xxl: "2.5rem", //40px
   },
 };
 
