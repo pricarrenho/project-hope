@@ -26,7 +26,7 @@ const WrapperModifier = {
     `,
 };
 
-export const WrapperButton = styled.button<WrapperProps>`
+export const ButtonWrapper = styled.button<WrapperProps>`
   ${({ $styleType, theme }) => css`
     display: flex;
     gap: 8px;

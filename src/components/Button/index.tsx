@@ -18,8 +18,8 @@ export const Button = ({
   };
 
   return (
-    <S.WrapperButton $styleType={styleType} {...props}>
+    <S.ButtonWrapper $styleType={styleType} {...props}>
       {icon && icons[icon]} {children}
-    </S.WrapperButton>
+    </S.ButtonWrapper>
   );
 };

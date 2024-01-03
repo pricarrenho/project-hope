@@ -111,7 +111,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <S.SidebarContainer>
+    <S.SidebarWrapper>
       <S.LogoContainer>
         <S.LogoImage
           src={logo}
@@ -154,6 +154,6 @@ export const Sidebar = () => {
           </div>
         ))}
       </S.SidebarContent>
-    </S.SidebarContainer>
+    </S.SidebarWrapper>
   );
 };

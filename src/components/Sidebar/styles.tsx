@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
-export const SidebarContainer = styled.div`
+export const SidebarWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;

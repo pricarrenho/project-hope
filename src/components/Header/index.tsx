@@ -5,7 +5,7 @@ import { Button } from "../Button";
 
 export const Header = () => {
   return (
-    <S.HeaderContainer>
+    <S.HeaderWrapper>
       <S.HeaderContent>
         <Input inputType="text" label="Search..." name="inputSearch" />
 
@@ -26,6 +26,6 @@ export const Header = () => {
           </S.HeaderLinks>
         </S.HeaderLinks>
       </S.HeaderContent>
-    </S.HeaderContainer>
+    </S.HeaderWrapper>
   );
 };

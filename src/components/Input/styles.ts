@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const InputContainer = styled.div`
+export const InputWrapper = styled.div`
   ${() => css`
     display: flex;
     gap: 8px;
