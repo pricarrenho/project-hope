@@ -1,4 +1,5 @@
 import { Banner } from "../components/Banner";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Routes } from "../routes";
@@ -15,6 +16,8 @@ export const Layout = () => {
         <Banner />
 
         <Routes />
+
+        <Footer />
       </S.RightContent>
     </S.LayoutContainer>
   );
