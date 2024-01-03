@@ -14,11 +14,13 @@ const colors = {
     200: "#1AA053",
   },
   neutral: {
+    50: "#D3D3D3",
     100: "#ADB5BD",
     200: "#8A92A6",
     250: "#343948",
     300: "#30384F",
     400: "#222738",
+    500: "#151824",
   },
 };
 
@@ -36,7 +38,7 @@ const font = {
 export const themeDefault = {
   colors: {
     ...colors,
-    background: colors.neutral[400],
+    background: colors.neutral[500],
   },
   font,
 };
