@@ -1,9 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { DefaultTheme, css } from "styled-components";
+import { SummaryCardStyleType } from "./types";
 
 export const SummaryCardWrapper = styled.div`
   ${({ theme }) => css`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
+
     justify-content: center;
     align-items: center;
     padding: 24px;
@@ -53,5 +56,58 @@ export const Value = styled.p`
     font-weight: 500;
     line-height: 175%;
     color: ${theme.colors.neutral[50]};
+  `}
+`;
+
+type BorderProps = {
+  $styleType: SummaryCardStyleType;
+  percentage: number;
+};
+
+const BorderModifier = {
+  blueDark: (percentage: number, theme: DefaultTheme) => css`
+    background: conic-gradient(
+      ${theme.colors.blue[400]} 0% ${percentage}%,
+      #ecf0f1 ${percentage}% 100%
+    );
+  `,
+  blue: (percentage: number, theme: DefaultTheme) => css`
+    background: conic-gradient(
+      ${theme.colors.blue[200]} 0% ${percentage}%,
+      #ecf0f1 ${percentage}% 100%
+    );
+  `,
+};
+
+export const OuterBall = styled.div<BorderProps>`
+  ${({ $styleType, percentage, theme }) => css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+
+    ${$styleType && BorderModifier[$styleType](percentage, theme)};
+  `}
+`;
+
+export const InnerBall = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+
+    background: ${theme.colors.neutral[400]};
+    border-radius: 50%;
   `}
 `;
