@@ -18,12 +18,11 @@ export const SummaryCardContent = styled.div`
 `;
 
 export const HomeContent = styled.div`
-  display: flex;
-  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
 `;
 
-export const HomeContentLeft = styled.div`
-  flex: 1;
-`;
+export const HomeContentLeft = styled.div``;
 
 export const HomeContentRight = styled.div``;

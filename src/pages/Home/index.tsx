@@ -1,3 +1,5 @@
+import { ConversionsCard } from "../../components/ConversionsCard";
+import { EarningsCard } from "../../components/EarningsCard";
 import { MainChart } from "../../components/MainChart";
 import { SummaryCard } from "../../components/SummaryCard";
 import * as S from "./styles";
@@ -47,9 +49,16 @@ export const Home = () => {
       <S.HomeContent>
         <S.HomeContentLeft>
           <MainChart />
+
+          <div>
+            <EarningsCard />
+            <ConversionsCard />
+          </div>
         </S.HomeContentLeft>
 
-        <S.HomeContentRight></S.HomeContentRight>
+        <S.HomeContentRight>
+          <div>Right Content</div>
+        </S.HomeContentRight>
       </S.HomeContent>
     </S.HomeWrapper>
   );
