@@ -73,7 +73,7 @@ const BorderModifier = {
   `,
   blue: (percentage: number, theme: DefaultTheme) => css`
     background: conic-gradient(
-      ${theme.colors.blue[200]} 0% ${percentage}%,
+      ${theme.colors.blue[150]} 0% ${percentage}%,
       #ecf0f1 ${percentage}% 100%
     );
   `,
