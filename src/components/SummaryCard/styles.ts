@@ -68,13 +68,13 @@ const BorderModifier = {
   blueDark: (percentage: number, theme: DefaultTheme) => css`
     background: conic-gradient(
       ${theme.colors.blue[400]} 0% ${percentage}%,
-      #ecf0f1 ${percentage}% 100%
+      ${theme.colors.neutral[200]} ${percentage}% 100%
     );
   `,
   blue: (percentage: number, theme: DefaultTheme) => css`
     background: conic-gradient(
       ${theme.colors.blue[150]} 0% ${percentage}%,
-      #ecf0f1 ${percentage}% 100%
+      ${theme.colors.neutral[200]} ${percentage}% 100%
     );
   `,
 };

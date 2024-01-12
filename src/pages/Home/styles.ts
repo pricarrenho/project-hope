@@ -6,7 +6,7 @@ export const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 0px 24px;
+    padding: 0px 36px 36px 36px;
   `}
 `;
 
@@ -18,11 +18,12 @@ export const SummaryCardContent = styled.div`
 `;
 
 export const HomeContent = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
 `;
 
-export const HomeContentLeft = styled.div``;
-
-export const HomeContentRight = styled.div``;
+export const ChartsContent = styled.div`
+  display: flex;
+  gap: 40px;
+`;

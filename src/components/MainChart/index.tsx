@@ -1,11 +1,10 @@
 import Chart, { GoogleChartOptions } from "react-google-charts";
-import * as S from "./styles";
 import { useTheme } from "styled-components";
+import * as S from "./styles";
 
 export const MainChart = () => {
   const theme = useTheme();
 
-  console.log("aaa", theme.colors.green);
   const data = [
     ["month", "Sales", "Cost"],
     ["Jan", 99, 81],
@@ -19,10 +18,9 @@ export const MainChart = () => {
 
   const options: GoogleChartOptions = {
     legend: { position: "top", textStyle: { color: theme.colors.blue[50] } },
-    titleTextStyle: { color: theme.colors.blue[50] },
     title: "$855.8K",
-    subtitle: "AAAA",
-    backgroundColor: "#222738",
+    titleTextStyle: { color: theme.colors.white },
+    backgroundColor: theme.colors.neutral[400],
     areaOpacity: 0.04,
     vAxis: {
       gridlines: {
@@ -37,6 +35,8 @@ export const MainChart = () => {
     hAxis: {
       textStyle: { color: theme.colors.blue[50] },
     },
+
+    chartArea: { width: "90%", height: "70%", left: 60, top: 90 },
   };
 
   return (
@@ -44,7 +44,7 @@ export const MainChart = () => {
       <Chart
         chartType="AreaChart"
         width="100%"
-        height="400px"
+        height="447px"
         data={data}
         options={options}
       />
