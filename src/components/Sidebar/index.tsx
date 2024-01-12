@@ -14,7 +14,7 @@ import form from "../../assets/images/form.png";
 import table from "../../assets/images/table.png";
 import icons from "../../assets/images/icons.png";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import * as S from "./styles";
 import { useState } from "react";
@@ -122,7 +122,11 @@ export const Sidebar = () => {
       </S.LogoContainer>
 
       <S.Btn onClick={handleCloseMenu}>
-        <FaArrowLeft size={18} color="#ffffff" />
+        {isMenuOpen ? (
+          <FaArrowLeft size={18} color="#ffffff" />
+        ) : (
+          <FaArrowRight size={18} color="#ffffff" />
+        )}
       </S.Btn>
 
       <S.SidebarContent>
