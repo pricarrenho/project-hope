@@ -12,7 +12,7 @@ export const HomeWrapper = styled.div`
 
 export const SummaryCardContent = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 16px;
   justify-content: center;
   margin-top: -40px;
 `;
