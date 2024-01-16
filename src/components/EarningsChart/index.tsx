@@ -1,24 +1,25 @@
-import { EarningsCardProps } from "./types";
+import { EarningsChartProps } from "./types";
+
 import * as S from "./styles";
 
-export const EarningsCard = ({
+export const EarningsChart = ({
   percentageFashion,
   percentageAccessories,
-}: EarningsCardProps) => {
+}: EarningsChartProps) => {
   return (
-    <S.EarningsCardWrapper>
+    <S.EarningsChartWrapper>
       <S.Title>Earnings</S.Title>
 
-      <S.EarningsCardContent>
+      <S.EarningsChartContent>
         <S.OuterBallFashion percentageFashion={percentageFashion}>
           <S.InnerBall>
-            <S.EarningsCardBackground>
+            <S.EarningsChartBackground>
               <S.OuterBallAccessories
                 percentageAccessories={percentageAccessories}
               >
                 <S.InnerBall></S.InnerBall>
               </S.OuterBallAccessories>
-            </S.EarningsCardBackground>
+            </S.EarningsChartBackground>
           </S.InnerBall>
         </S.OuterBallFashion>
 
@@ -41,7 +42,7 @@ export const EarningsCard = ({
             </div>
           </S.SubtitleContent>
         </S.SubtitleWrapper>
-      </S.EarningsCardContent>
-    </S.EarningsCardWrapper>
+      </S.EarningsChartContent>
+    </S.EarningsChartWrapper>
   );
 };

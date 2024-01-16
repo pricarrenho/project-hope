@@ -1,6 +1,6 @@
 import styled, { DefaultTheme, css } from "styled-components";
 
-export const EarningsCardWrapper = styled.div`
+export const EarningsChartWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ export const Title = styled.p`
   `}
 `;
 
-export const EarningsCardContent = styled.div`
+export const EarningsChartContent = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
@@ -119,7 +119,7 @@ export const InnerBall = styled.div`
   `}
 `;
 
-export const EarningsCardBackground = styled.div`
+export const EarningsChartBackground = styled.div`
   ${({ theme }) => css`
     position: absolute;
     top: 50%;
