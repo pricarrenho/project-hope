@@ -7,8 +7,6 @@ export const SidebarWrapper = styled.div`
     flex-direction: column;
     position: relative;
     background-color: ${theme.colors.neutral[400]};
-    filter: drop-shadow(8px 1px 100px ${theme.colors.neutral[300]});
-    transition: max-width 0ms.2s;
   `}
 `;
 
@@ -20,7 +18,7 @@ export const LogoContainer = styled.div`
     gap: 16px;
     border-bottom: 2px solid ${theme.colors.neutral[300]};
     padding: 16px;
-    height: 40px;
+    height: 44px;
   `}
 `;
 
