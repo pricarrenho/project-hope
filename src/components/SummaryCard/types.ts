@@ -2,7 +2,7 @@ export type SummaryCardStyleType = "blueDark" | "blue";
 
 export type SummaryCardProps = {
   title: string;
-  value: string;
+  value: number;
   percentage: number;
   color: SummaryCardStyleType;
 };

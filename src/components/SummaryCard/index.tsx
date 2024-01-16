@@ -1,5 +1,7 @@
 import { SummaryCardProps } from "./types";
 import { GoArrowUpRight } from "react-icons/go";
+import { formattedPrice } from "../../utils/formatter";
+
 import * as S from "./styles";
 
 export const SummaryCard = ({
@@ -18,7 +20,7 @@ export const SummaryCard = ({
 
       <S.SummaryCarContent>
         <S.Title>{title}</S.Title>
-        <S.Value>${value}</S.Value>
+        <S.Value>{formattedPrice.format(value)}</S.Value>
       </S.SummaryCarContent>
     </S.SummaryCardWrapper>
   );
