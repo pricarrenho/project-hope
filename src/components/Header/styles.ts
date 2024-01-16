@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const HeaderWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
-    background-color: ${theme.colors.neutral[400]};
+    background-color: ${theme.colors.neutral[350]};
   `}
 `;
 

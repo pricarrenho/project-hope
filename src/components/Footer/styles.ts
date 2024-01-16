@@ -7,7 +7,7 @@ export const FooterWrapper = styled.div`
       justify-content: space-between;
       align-items: center;
       padding: 16px 24px;
-      background: ${theme.colors.neutral[400]};
+      background: ${theme.colors.neutral[350]};
     `}
 `;
 
