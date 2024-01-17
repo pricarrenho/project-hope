@@ -4,7 +4,7 @@ type ButtonType =
   | AnchorHTMLAttributes<HTMLAnchorElement>
   | ButtonHTMLAttributes<HTMLButtonElement>;
 
-export type ButtonStyleType = "transparent" | "justIcon";
+export type ButtonStyleType = "transparent" | "justIcon" | "blue" | "blueLight";
 
 export type ButtonProps = {
   children?: string | number;

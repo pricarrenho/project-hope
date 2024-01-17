@@ -22,8 +22,6 @@ export const ConversionsChart = () => {
   const options: GoogleChartOptions = {
     backgroundColor: theme.colors.neutral[400],
     legend: { position: "none" },
-    title: "Conversions",
-    titleTextStyle: { color: theme.colors.white },
     vAxis: {
       gridlines: {
         color: theme.colors.blue[50],
@@ -43,6 +41,8 @@ export const ConversionsChart = () => {
 
   return (
     <S.ConversionsChartWrapper>
+      <S.Title>Conversions</S.Title>
+
       <Chart
         chartType="ColumnChart"
         width="100%"

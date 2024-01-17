@@ -14,7 +14,7 @@ export const EarningsChartWrapper = styled.div`
 export const Title = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.neutral[50]};
-    font-size: 19px;
+    font-size: ${theme.font.sizes.md};
     font-weight: 500;
     line-height: 175%;
   `}

@@ -24,13 +24,14 @@ export const BannerTextContainer = styled.div`
   ${() => css`
     display: flex;
     flex-direction: column;
+    width: 60%;
     gap: 8px;
   `}
 `;
 
 export const Title = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xxl};
+    font-size: ${theme.font.sizes.xl};
     font-weight: 700;
     color: ${theme.colors.white};
   `}

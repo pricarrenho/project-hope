@@ -19,10 +19,10 @@ export const EnterpriseClientsHeader = styled.div`
 
 export const EnterpriseClientsHeaderTitle = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.lg};
+    color: ${theme.colors.neutral[50]};
+    font-size: ${theme.font.sizes.md};
     font-weight: 500;
     line-height: 175%;
-    color: ${theme.colors.neutral[50]};
   `}
 `;
 
@@ -37,7 +37,7 @@ export const EnterpriseClientsHeaderSubtitleWrapper = styled.h2`
 
 export const EnterpriseClientsHeaderSubtitle = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.sizes.sm};
     font-style: normal;
     font-weight: 400;
     line-height: 175%;
@@ -49,6 +49,7 @@ export const Table = styled.table`
   ${({ theme }) => css`
     border-collapse: collapse;
     color: ${theme.colors.neutral[200]};
+    font-size: ${theme.font.sizes.sm};
 
     th,
     td {
@@ -61,7 +62,7 @@ export const Table = styled.table`
 export const TBody = styled.tbody`
   ${({ theme }) => css`
     color: ${theme.colors.neutral[50]};
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.sizes.sm};
     font-weight: 400;
     line-height: 175%;
 
