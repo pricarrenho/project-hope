@@ -5,6 +5,8 @@ import { ConversionsChart } from "../../components/ConversionsChart";
 import { EnterpriseClientsCard } from "../../components/EnterpriseClientsCard";
 
 import * as S from "./styles";
+import { DebitCard } from "../../components/DabitCard";
+import { VisitorsCard } from "../../components/VisitorsCard";
 
 export const Home = () => {
   return (
@@ -53,6 +55,15 @@ export const Home = () => {
         </S.ChartsContent>
 
         <EnterpriseClientsCard />
+
+        <S.ChartsContent>
+          <div>
+            <DebitCard />
+            <VisitorsCard />
+          </div>
+
+          <div>Card Activity</div>
+        </S.ChartsContent>
       </S.HomeContent>
     </S.HomeWrapper>
   );
