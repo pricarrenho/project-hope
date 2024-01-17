@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     html,
     body {
       background: ${theme.colors.background};
+      font-family: ${theme.font.family}, sans-serif;
     }
 
     a {
