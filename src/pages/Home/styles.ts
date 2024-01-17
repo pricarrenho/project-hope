@@ -24,6 +24,7 @@ export const HomeContent = styled.div`
 `;
 
 export const ChartsContent = styled.div`
-  display: flex;
+  display: grid;
   gap: 40px;
+  grid-template-columns: 2fr 3fr;
 `;
