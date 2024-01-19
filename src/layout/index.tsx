@@ -13,11 +13,13 @@ export const Layout = () => {
       <S.RightContent>
         <Header />
 
-        <Banner />
+        <S.MainContainer>
+          <Banner />
 
-        <Routes />
+          <Routes />
 
-        <Footer />
+          <Footer />
+        </S.MainContainer>
       </S.RightContent>
     </S.LayoutContainer>
   );

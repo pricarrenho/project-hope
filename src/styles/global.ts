@@ -6,10 +6,17 @@ export const GlobalStyle = createGlobalStyle`
     h1,
     h2,
     h3,
+    h4,
     p {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
     }
 
     html,

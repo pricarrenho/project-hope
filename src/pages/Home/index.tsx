@@ -7,6 +7,7 @@ import { EnterpriseClientsCard } from "../../components/EnterpriseClientsCard";
 import * as S from "./styles";
 import { DebitCard } from "../../components/DabitCard";
 import { VisitorsCard } from "../../components/VisitorsCard";
+import { ActivityCard } from "../../components/ ActivityCard";
 
 export const Home = () => {
   return (
@@ -48,22 +49,22 @@ export const Home = () => {
       <S.HomeContent>
         <MainChart />
 
-        <S.ChartsContent>
+        <S.FirstChartsContent>
           <EarningsChart percentageFashion={70} percentageAccessories={40} />
 
           <ConversionsChart />
-        </S.ChartsContent>
+        </S.FirstChartsContent>
 
         <EnterpriseClientsCard />
 
-        <S.ChartsContent>
+        <S.SecondChartsContent>
           <div>
             <DebitCard />
             <VisitorsCard />
           </div>
 
-          <div>Card Activity</div>
-        </S.ChartsContent>
+          <ActivityCard />
+        </S.SecondChartsContent>
       </S.HomeContent>
     </S.HomeWrapper>
   );

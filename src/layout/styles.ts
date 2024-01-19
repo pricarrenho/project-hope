@@ -8,8 +8,18 @@ export const LayoutContainer = styled.div`
 
 export const RightContent = styled.div`
   ${() => css`
-    flex: 1;
     display: flex;
     flex-direction: column;
+  `}
+`;
+
+export const MainContainer = styled.div`
+  ${() => css`
+    height: calc(100vh - 77px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0.1em;
+    }
   `}
 `;

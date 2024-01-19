@@ -23,8 +23,14 @@ export const HomeContent = styled.div`
   gap: 40px;
 `;
 
-export const ChartsContent = styled.div`
+export const FirstChartsContent = styled.div`
   display: grid;
   gap: 40px;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 4fr 8fr;
+`;
+
+export const SecondChartsContent = styled.div`
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 4fr 4fr;
 `;
