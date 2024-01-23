@@ -6,7 +6,7 @@ export const FooterWrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 24px;
+      padding: 16px 36px;
       background: ${theme.colors.neutral[350]};
     `}
 `;

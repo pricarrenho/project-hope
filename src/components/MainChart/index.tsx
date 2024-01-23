@@ -1,8 +1,10 @@
 import Chart, { GoogleChartOptions } from "react-google-charts";
 import { useTheme } from "styled-components";
 import * as S from "./styles";
+import { useGlobalContext } from "../../context/GlobalContext";
 
 export const MainChart = () => {
+  const { debouncedMenuState } = useGlobalContext();
   const theme = useTheme();
 
   const data = [
@@ -35,13 +37,18 @@ export const MainChart = () => {
     hAxis: {
       textStyle: { color: theme.colors.blue[50] },
     },
-
     chartArea: { width: "90%", height: "70%", left: 60, top: 90 },
+    animation: {
+      startup: true,
+      easing: "linear",
+      duration: 1000,
+    },
   };
 
   return (
     <S.MainChartWrapper>
       <Chart
+        key={debouncedMenuState}
         chartType="AreaChart"
         width="100%"
         height="447px"

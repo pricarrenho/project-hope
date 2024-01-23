@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.div`
     display: flex;
     background-color: ${theme.colors.neutral[350]};
     height: 77px;
+    padding: 0px 36px;
   `}
 `;
 
@@ -14,12 +15,7 @@ export const HeaderContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
   `}
-`;
-
-export const InputContainer = styled.div`
-  /* display: none; */
 `;
 
 export const HeaderLinks = styled.div`

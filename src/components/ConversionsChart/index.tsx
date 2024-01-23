@@ -1,8 +1,10 @@
 import Chart, { GoogleChartOptions } from "react-google-charts";
 import { useTheme } from "styled-components";
+import { useGlobalContext } from "../../context/GlobalContext";
 import * as S from "./styles";
 
 export const ConversionsChart = () => {
+  const { debouncedMenuState } = useGlobalContext();
   const theme = useTheme();
 
   const data = [
@@ -37,6 +39,12 @@ export const ConversionsChart = () => {
       1: { color: theme.colors.blue[150] }, // Cor para a série "Cost"
     },
     isStacked: true,
+    chartArea: { width: "86%", height: "76%", right: 40, left: 60, top: 40 },
+    animation: {
+      startup: true,
+      easing: "linear",
+      duration: 1000,
+    },
   };
 
   return (
@@ -44,6 +52,7 @@ export const ConversionsChart = () => {
       <S.Title>Conversions</S.Title>
 
       <Chart
+        key={debouncedMenuState}
         chartType="ColumnChart"
         width="100%"
         height="343px"

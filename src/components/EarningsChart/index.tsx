@@ -11,11 +11,11 @@ export const EarningsChart = ({
       <S.Title>Earnings</S.Title>
 
       <S.EarningsChartContent>
-        <S.OuterBallFashion percentageFashion={percentageFashion}>
+        <S.OuterBallFashion $percentageFashion={percentageFashion}>
           <S.InnerBall>
             <S.EarningsChartBackground>
               <S.OuterBallAccessories
-                percentageAccessories={percentageAccessories}
+                $percentageAccessories={percentageAccessories}
               >
                 <S.InnerBall></S.InnerBall>
               </S.OuterBallAccessories>

@@ -27,6 +27,14 @@ export const ActivityCard = () => {
       title: "Product added",
       subtitle: "11 JUL 4:50 AM",
     },
+    {
+      title: "New order #8744152",
+      subtitle: "11 JUL 11 PM",
+    },
+    {
+      title: "Affiliate Payout",
+      subtitle: "11 JUL 7:64 PM",
+    },
   ];
 
   return (
@@ -39,8 +47,8 @@ export const ActivityCard = () => {
         </S.ActivityCardTitleSpan>
       </S.ActivityCardTitleContainer>
 
-      {activityLibrary.map((item) => (
-        <S.ActivityCardContentContainer>
+      {activityLibrary.map((item, index) => (
+        <S.ActivityCardContentContainer key={index}>
           <S.ActivityCardContentSpan />
 
           <S.ActivityCardContent>

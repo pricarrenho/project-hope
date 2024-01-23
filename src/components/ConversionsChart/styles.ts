@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
 export const ConversionsChartWrapper = styled.div`
-  border-radius: 8px;
-  overflow: hidden;
-
-  flex: 1;
-
-  position: relative;
+  ${({ theme }) => css`
+    border-radius: 8px;
+    background-color: ${theme.colors.neutral[400]};
+    overflow: hidden;
+    position: relative;
+  `}
 `;
 
 export const Title = styled.p`

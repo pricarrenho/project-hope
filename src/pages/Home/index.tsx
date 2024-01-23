@@ -34,8 +34,6 @@ export const Home = () => {
           color="blueDark"
         />
 
-        <SummaryCard title="Revenue" value={742} percentage={60} color="blue" />
-
         <SummaryCard
           title="Net Income"
           value={150}
@@ -58,10 +56,10 @@ export const Home = () => {
         <EnterpriseClientsCard />
 
         <S.SecondChartsContent>
-          <div>
+          <S.LeftSideWrapper>
             <DebitCard />
             <VisitorsCard />
-          </div>
+          </S.LeftSideWrapper>
 
           <ActivityCard />
         </S.SecondChartsContent>

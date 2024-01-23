@@ -17,6 +17,7 @@ const WrapperModifier = {
   justIcon: () =>
     css`
       background: transparent;
+      padding: 8px 16px;
 
       &:hover {
         background: rgba(255, 255, 255, 0.1);

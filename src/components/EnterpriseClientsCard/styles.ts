@@ -13,7 +13,6 @@ export const EnterpriseClientsHeader = styled.div`
     flex-direction: column;
     background: ${theme.colors.neutral[400]};
     padding: 24px;
-    border: 1px solid ${theme.colors.black};
   `}
 `;
 
@@ -26,7 +25,7 @@ export const EnterpriseClientsHeaderTitle = styled.h2`
   `}
 `;
 
-export const EnterpriseClientsHeaderSubtitleWrapper = styled.h2`
+export const EnterpriseClientsHeaderSubtitleWrapper = styled.div`
   ${() =>
     css`
       display: flex;
@@ -56,6 +55,10 @@ export const Table = styled.table`
       padding: 16px;
       text-align: left;
     }
+
+    thead {
+      background: ${theme.colors.neutral[300]};
+    }
   `}
 `;
 
@@ -78,31 +81,27 @@ export const TBody = styled.tbody`
 `;
 
 type CompletionProps = {
-  percentage: number;
+  $percentage: number;
+  $isCompleted: boolean;
 };
 
 const CompletionModifier = {
-  blue: (theme: DefaultTheme, percentage: number) => css`
-    background: linear-gradient(
-      to right,
-      ${theme.colors.blue[400]} 0% ${percentage}%,
-      #455990 ${percentage}% 100%
-    );
-  `,
-
-  green: (theme: DefaultTheme) => css`
+  completed: (theme: DefaultTheme) => css`
     background: ${theme.colors.green[200]};
   `,
 };
 
 export const Completion = styled.div<CompletionProps>`
-  ${({ theme, percentage }) => css`
+  ${({ theme, $percentage, $isCompleted }) => css`
     width: 100%;
     height: 10px;
+    background: linear-gradient(
+      to right,
+      ${theme.colors.blue[400]} 0% ${$percentage}%,
+      ${theme.colors.neutral[200]} ${$percentage}% 100%
+    );
 
-    ${percentage === 100
-      ? CompletionModifier.green(theme)
-      : CompletionModifier.blue(theme, percentage)};
+    ${$isCompleted && CompletionModifier.completed(theme)};
   `}
 `;
 
@@ -121,11 +120,11 @@ export const Contact = styled.div`
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      border: 2px solid ${theme.colors.blue[400]};
-      background: ${theme.colors.blue[600]};
+      border: 2px solid ${theme.colors.neutral[100]};
+      background: ${theme.colors.blue[550]};
 
       margin-left: -10px;
-      color: ${theme.colors.blue[400]};
+      color: ${theme.colors.neutral[100]};
       font-size: ${theme.font.sizes.sm};
       font-weight: 500;
       line-height: 175%;

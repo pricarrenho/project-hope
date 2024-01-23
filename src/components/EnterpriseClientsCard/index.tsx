@@ -80,8 +80,11 @@ export const EnterpriseClientsCard = () => {
               <td>{formattedPrice.format(client.order)}</td>
 
               <td>
-                {client.completion}%{" "}
-                <S.Completion percentage={client.completion}></S.Completion>
+                {client.completion}%
+                <S.Completion
+                  $percentage={client.completion}
+                  $isCompleted={client.completion === 100}
+                ></S.Completion>
               </td>
             </tr>
           ))}

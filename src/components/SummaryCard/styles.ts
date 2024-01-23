@@ -4,12 +4,9 @@ import { SummaryCardStyleType } from "./types";
 export const SummaryCardWrapper = styled.div`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60px 1fr;
     gap: 16px;
-
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
+    padding: 16px 12px;
 
     border-radius: 8px;
     background: ${theme.colors.neutral[400]};
@@ -45,26 +42,26 @@ export const Value = styled.p`
 
 type BorderProps = {
   $styleType: SummaryCardStyleType;
-  percentage: number;
+  $percentage: number;
 };
 
 const BorderModifier = {
-  blueDark: (percentage: number, theme: DefaultTheme) => css`
+  blueDark: ($percentage: number, theme: DefaultTheme) => css`
     background: conic-gradient(
-      ${theme.colors.blue[400]} 0% ${percentage}%,
-      ${theme.colors.neutral[200]} ${percentage}% 100%
+      ${theme.colors.blue[400]} 0% ${$percentage}%,
+      ${theme.colors.neutral[200]} ${$percentage}% 100%
     );
   `,
-  blue: (percentage: number, theme: DefaultTheme) => css`
+  blue: ($percentage: number, theme: DefaultTheme) => css`
     background: conic-gradient(
-      ${theme.colors.blue[150]} 0% ${percentage}%,
-      ${theme.colors.neutral[200]} ${percentage}% 100%
+      ${theme.colors.blue[150]} 0% ${$percentage}%,
+      ${theme.colors.neutral[200]} ${$percentage}% 100%
     );
   `,
 };
 
 export const OuterBall = styled.div<BorderProps>`
-  ${({ $styleType, percentage, theme }) => css`
+  ${({ $styleType, $percentage, theme }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +71,7 @@ export const OuterBall = styled.div<BorderProps>`
     border-radius: 50%;
     position: relative;
 
-    ${$styleType && BorderModifier[$styleType](percentage, theme)};
+    ${$styleType && BorderModifier[$styleType]($percentage, theme)};
   `}
 `;
 

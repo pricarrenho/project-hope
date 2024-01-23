@@ -11,9 +11,9 @@ export const HomeWrapper = styled.div`
 `;
 
 export const SummaryCardContent = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-  justify-content: center;
   margin-top: -40px;
 `;
 
@@ -33,4 +33,10 @@ export const SecondChartsContent = styled.div`
   display: grid;
   gap: 40px;
   grid-template-columns: 4fr 4fr;
+`;
+
+export const LeftSideWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 `;

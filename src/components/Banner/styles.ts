@@ -16,7 +16,7 @@ export const BannerContainer = styled.div`
   ${() => css`
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding: 24px 36px;
   `}
 `;
 
@@ -42,6 +42,7 @@ export const Description = styled.p`
     font-size: ${theme.font.sizes.lg};
     font-weight: 500;
     color: ${theme.colors.white};
+    line-height: 38px;
   `}
 `;
 

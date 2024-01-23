@@ -12,7 +12,7 @@ export const SummaryCard = ({
 }: SummaryCardProps) => {
   return (
     <S.SummaryCardWrapper>
-      <S.OuterBall percentage={percentage} $styleType={color}>
+      <S.OuterBall $percentage={percentage} $styleType={color}>
         <S.InnerBall>
           <GoArrowUpRight color="#8A92A6 " size={36} />
         </S.InnerBall>

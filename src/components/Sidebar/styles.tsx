@@ -2,19 +2,19 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 type SidebarWrapperProps = {
-  isOpen: boolean;
+  $isOpen: boolean;
 };
 
 export const SidebarWrapper = styled.div<SidebarWrapperProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme, $isOpen }) => css`
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: ${theme.colors.neutral[400]};
-    width: 72px;
+    width: 80px;
     transition: width 0.3s ease;
 
-    ${isOpen &&
+    ${$isOpen &&
     css`
       width: 220px;
     `}
@@ -74,7 +74,7 @@ export const SidebarContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 24px;
+    padding: 16px;
   `}
 `;
 
@@ -111,7 +111,7 @@ export const LinkLeftContent = styled.div`
     align-items: center;
     gap: 8px;
 
-    height: 36px;
+    height: 40px;
   `}
 `;
 
@@ -120,11 +120,11 @@ export const LinkImage = styled.img`
 `;
 
 type LinkTitleProps = {
-  isVisible: boolean;
+  $isVisible: boolean;
 };
 
 export const LinkTitle = styled.p<LinkTitleProps>`
-  ${({ theme, isVisible }) => css`
+  ${({ theme, $isVisible }) => css`
     color: ${theme.colors.neutral[200]};
     font-size: ${theme.font.sizes.md};
     font-weight: 400;
@@ -135,9 +135,9 @@ export const LinkTitle = styled.p<LinkTitleProps>`
     opacity: 0;
     transition: max-width 0.3s, max-height 0.3s, opacity 0.3s;
 
-    ${isVisible &&
+    ${$isVisible &&
     css`
-      max-height: 40px;
+      max-height: 60px;
       max-width: 200px;
       opacity: 1;
       transition: max-width 0.3s, max-height 0s 0.2s, opacity 0.3s;

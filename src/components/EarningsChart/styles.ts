@@ -79,12 +79,12 @@ export const SubtitleValue = styled.p`
 `;
 
 type BorderProps = {
-  percentageFashion?: number;
-  percentageAccessories?: number;
+  $percentageFashion?: number;
+  $percentageAccessories?: number;
 };
 
 export const OuterBallFashion = styled.div<BorderProps>`
-  ${({ percentageFashion, theme }) => css`
+  ${({ $percentageFashion, theme }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,8 +95,8 @@ export const OuterBallFashion = styled.div<BorderProps>`
     position: relative;
 
     background: conic-gradient(
-      ${theme.colors.blue[400]} 0% ${percentageFashion}%,
-      ${theme.colors.neutral[200]} ${percentageFashion}% 100%
+      ${theme.colors.blue[400]} 0% ${$percentageFashion}%,
+      ${theme.colors.neutral[200]} ${$percentageFashion}% 100%
     );
   `}
 `;
@@ -138,7 +138,7 @@ export const EarningsChartBackground = styled.div`
 `;
 
 export const OuterBallAccessories = styled.div<BorderProps>`
-  ${({ theme, percentageAccessories }) => css`
+  ${({ theme, $percentageAccessories }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,8 +148,8 @@ export const OuterBallAccessories = styled.div<BorderProps>`
     position: relative;
 
     background: conic-gradient(
-      ${theme.colors.blue[150]} 0% ${percentageAccessories}%,
-      ${theme.colors.neutral[200]} ${percentageAccessories}% 100%
+      ${theme.colors.blue[150]} 0% ${$percentageAccessories}%,
+      ${theme.colors.neutral[200]} ${$percentageAccessories}% 100%
     );
   `}
 `;

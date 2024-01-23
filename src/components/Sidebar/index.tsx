@@ -8,11 +8,10 @@ import user from "../../assets/images/user.png";
 import error404 from "../../assets/images/error404.png";
 import error505 from "../../assets/images/error505.png";
 import maintence from "../../assets/images/maintence.png";
-// import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import { useGlobalContext } from "../../context/GlobalContext";
 import * as S from "./styles";
-import { useState } from "react";
 
 const SidebarLibrary = [
   [
@@ -25,7 +24,7 @@ const SidebarLibrary = [
     {
       name: "Menu Style",
       icons: menuStyle,
-      route: "/menu-style",
+      route: "/",
     },
   ],
 
@@ -70,14 +69,14 @@ const SidebarLibrary = [
 ];
 
 export const Sidebar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const { isMenuOpen, handleMenuIsOpen } = useGlobalContext();
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    handleMenuIsOpen(!isMenuOpen);
   };
 
   return (
-    <S.SidebarWrapper isOpen={isMenuOpen}>
+    <S.SidebarWrapper $isOpen={isMenuOpen}>
       <S.LogoContainer>
         <S.LogoImage
           src={logo}
@@ -106,12 +105,12 @@ export const Sidebar = () => {
                       <S.LinkLeftContent>
                         <S.LinkImage src={value.icons} />
 
-                        <S.LinkTitle isVisible={isMenuOpen}>
+                        <S.LinkTitle $isVisible={isMenuOpen}>
                           {value.name}
                         </S.LinkTitle>
                       </S.LinkLeftContent>
 
-                      {/* <IoIosArrowForward color="#8A92A6" /> */}
+                      <IoIosArrowForward color="#8A92A6" />
                     </S.LinkContainer>
                   )}
                 </S.SidebarButtonsContainer>
