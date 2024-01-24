@@ -1,11 +1,11 @@
 import Chart, { GoogleChartOptions } from "react-google-charts";
 import { useTheme } from "styled-components";
-import * as S from "./styles";
 import { useGlobalContext } from "../../context/GlobalContext";
+import * as S from "./styles";
 
 export const MainChart = () => {
-  const { debouncedMenuState } = useGlobalContext();
   const theme = useTheme();
+  const { debouncedMenuState } = useGlobalContext();
 
   const data = [
     ["month", "Sales", "Cost"],

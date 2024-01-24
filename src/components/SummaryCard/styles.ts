@@ -18,6 +18,7 @@ export const SummaryCarContent = styled.div`
   ${() => css`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 8px;
   `}
 `;
